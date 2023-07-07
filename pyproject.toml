@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.7"
 temporalio = "^1.1.0"
 flask = {extras = ["async"], version = "^2.2.3"}
+pytest = "^7.1.2"
+pytest-asyncio = "^0.18.3"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
@@ -22,3 +24,4 @@ build-backend = "poetry.core.masonry.api"
 [tool.poe.tasks]
 format = [{cmd = "black ."}, {cmd = "isort ."}]
 lint = [{cmd = "black --check ."}, {cmd = "isort --check-only ."}]
+test = "pytest"

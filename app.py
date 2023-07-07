@@ -26,6 +26,7 @@ async def start(user_id):
             LoyaltyProgram.run,
             id=f"{user_id}",
             task_queue="loyalty-program-task-queue",
+            search_attributes={"points": [0]},
         )
 
         message = jsonify(

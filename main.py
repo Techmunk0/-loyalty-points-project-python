@@ -3,6 +3,7 @@ import asyncio
 from temporalio.client import Client
 from temporalio.worker import Worker
 
+from activity import send_email
 from loyalty_workflow import LoyaltyProgram
 
 
@@ -15,6 +16,7 @@ async def main():
         client,
         task_queue="loyalty-program-task-queue",
         workflows=[LoyaltyProgram],
+        activities=[send_email],
     )
     await worker.run()
 

@@ -11,7 +11,7 @@ poetry run python main.py
 
 ```bash
 curl -X POST http://localhost:5000/123
-curl -X POST http://localhost:5000/123/add_points/100
+curl -X POST http://localhost:5000/123/add_points/1000
 curl -X POST http://localhost:5000/123/add_points/30
 curl -X POST http://localhost:5000/123/add_points/20
 curl -X GET http://localhost:5000/123
@@ -59,4 +59,15 @@ Dry run a Batch Reset command:
 
 ```bash
 temporal workflow reset-batch --query "WorkflowType='LoyaltyProgram'" --reason "Sev2: id.1259" --type LastWorkflowTask --dry-run
+```
+
+
+```bash
+# create (not needed)
+temporal operator search-attribute create --name points --type int
+# list
+temporal operator search-attribute list
+# describe
+temporal workflow list \
+  --query "(points >= 1000) AND ExecutionStatus='Running'"
 ```
