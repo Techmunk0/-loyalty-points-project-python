@@ -121,14 +121,6 @@ git clone https://github.com/rachfop/loyalty-points-project-python
 cd loyalty-points-project-python
 ```
 
-3. 🎮 Install the dependencies:
-```sh
-# terminal one
-poetry run python app.py
-# terminal two
-poetry run python main.py
-```
-
 ---
 
 ## 🏁 Usage
@@ -152,7 +144,7 @@ curl -X POST http://localhost:5000/123/add_points/20
 curl -X GET http://localhost:5000/123
 ```
 
-## Get Points
+## Get points
 
 ```bash
 curl -X GET http://localhost:5000/123
@@ -209,8 +201,8 @@ temporal workflow list \
 
 ## 🗺 Roadmap
 
-> - [X] `ℹ️  Task 1: Implement X`
-> - [ ] `ℹ️  Task 2: Refactor Y`
+> - [X] `ℹ️  Task 1: Implement Activity`
+> - [ ] `ℹ️  Task 2: Send Grid/Twilio API`
 > - [ ] `ℹ️ ...`
 
 
